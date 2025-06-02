@@ -44,7 +44,7 @@ df = df.drop_duplicates()
 print(df)
 
 #renaming using manual tags
-df.rename(columns={"Name":"First Name"},inplace=True) 
+# df.rename(columns={"Name":"First Name"},inplace=True) 
 df.rename(index={'a':'row1'},inplace=True)
 print(df)
 
@@ -57,7 +57,7 @@ print(df)
 
 #string methods
 
-df['First Name'] = df['First Name'].str.upper()
+df['Name'] = df['Name'].str.upper()
 print(df)
 
 #merging two data frames
@@ -89,6 +89,19 @@ groupdf = pd.DataFrame({
 },index=['a','b','c','d'])
 
 grouped = groupdf.groupby('animal')
-print(grouped['weight'].mean())  #aggregated with mean
+# print(grouped['weight'].mean())  #aggregated with mean
+
+#DATA TRANSFORMATION METHODS 
 
 
+result  = groupdf.pivot_table(values='weight',index = 'animal',aggfunc='sum')
+print(result)
+
+#reshaping data
+result = df.melt(id_vars=['Name'],value_vars=["Age"])
+print(result)
+
+#sorting
+
+result = groupdf.sort_values('weight',ascending=True)
+print(result)
