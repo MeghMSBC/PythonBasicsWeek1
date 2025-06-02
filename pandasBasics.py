@@ -77,6 +77,18 @@ print(result)
 
 #concatenating dataframes
 
-new = pd.concat([df1, df2], axis=0)  # stack rows
-# pd.concat([df1, df2], axis=1)  # join columns
+# new = pd.concat([df1, df2], axis=0)  # stack rows
+new  = pd.concat([df1, df2], axis=1)  # join columns
 print(new)
+
+#grouping and aggregating
+
+groupdf = pd.DataFrame({
+    'animal':['dog','cat','cat','dog'],
+    'weight' :[45,32,33,48]
+},index=['a','b','c','d'])
+
+grouped = groupdf.groupby('animal')
+print(grouped['weight'].mean())  #aggregated with mean
+
+
