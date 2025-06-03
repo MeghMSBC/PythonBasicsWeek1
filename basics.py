@@ -28,8 +28,34 @@
 
 
 #dictionary
-dict = {
-   "table":["a piece of furniture","list of facts & figures"],
-   "cat":["a small animal"]
-}
-print(dict)
+# dict = {
+#    "table":["a piece of furniture","list of facts & figures"],
+#    "cat":["a small animal"]
+# }
+# print(dict)
+
+#factorial using recusrion
+#def factorial(n):
+#    if(n==0 or n==-1):
+#       return 1
+#    else:
+#       return n* factorial(n-1)
+# ans = factorial(5)
+# print(ans)
+
+# def sum(n):
+#     if(n==0):
+#         return 0
+#     return sum(n-1)+n
+# ans = sum(4)
+# print(ans)
+
+def showList(list,idx):
+    if(idx==len(list)):
+        return
+    print(list[idx])
+    showList(list,idx+1)
+
+myList = [1,2,3,4,5]
+
+showList(myList,0)
