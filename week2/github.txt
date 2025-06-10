@@ -1,0 +1,45 @@
+Git and Github notes
+
+#Git is a version control System
+- Everything is done inside the Repository(Repo)
+- Repository can be either public or private
+- Adding a readme is good practice
+- Local -> Our System
+- Remote -> Github 
+
+#Commands
+
+--------------------------------Basic----------------------------------
+- git clone <link of the repo using https> (To link github to the vscode)
+- git status (to check the status of the files could be Modified, Untracked, Staged, Unmodified)
+- git add . (to add all the changes at once)
+- git add <file name> (to add the particular file)
+- git commit -m "<message>" (next step is committing after addding the file)
+------------------------------Extra----------------------------------------
+- git push origin main (to push from local to remote)
+- git push -u origin main (everytime you want to push next time no need to write the "origin main")
+- git push origin <branch name> (can push the changes to some particular branch)
+- git init (adding an existing project to remote)
+- git remote add origin <link> (remote origin is set)
+------------------------------Branches---------------------------------
+- git branch (shows the branches and the current branch)
+- git branch -M "main" (to rename)
+- git checkout <branch name> (to go to some branch)
+- git checkout -b <new branch name> (to create a new branch)
+- git branch -d <branch name> (to delete a branch-> must be out of the branch to delete it)
+- git diff <branch name> (to compare two branches current and the <branch name>)
+------------------------------Merge and Conflicts----------------------------
+- git merge <branch main> (to merge the current and the <branch name>)
+<---this merge can also be done directly from github using a pull request (PR)--->
+- git pull origin main (get the changes from remote to local)
+<---after merging we do resolving merge conflict--->
+------------------------------Undoing changes--------------------------------
+- git reset <file name> (to reverse staged chanes ie- changes which are added but not commited)
+- git reset (git reset but for all the files)
+git log (checking all the commits)
+- git reset HEAD~1 (going back to the last commit)
+- git reset <commit hash > (go back to the particular commit stage)
+- git reset --hard <commit hash> (to go back to the particular plus remove all the next commits from the log in vsc)
+=------------------------------Fork-------------------------------------------
+Can create a rough copy of some github repo  on our account and then do pull request
+to add those changes on the base repo
